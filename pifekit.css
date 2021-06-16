@@ -562,3 +562,7 @@ body.dark .tab {
 .grow {
     width: 100%;
 }
+
+.btn.btn-lg {
+    line-height: 1.6rem;
+}
