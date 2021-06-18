@@ -566,3 +566,7 @@ body.dark .tab {
 .btn.btn-lg {
     line-height: 1.6rem;
 }
+
+audio {
+    max-width: 100%;
+}
