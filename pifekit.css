@@ -426,6 +426,9 @@ body.dark h6 {
     color: var(--secondary-active);
 }
 
+body.dark .navbar {
+    background: var(--primary);
+}
 
 body.dark .modal-container .modal-header {
     color: var(--secondary);
