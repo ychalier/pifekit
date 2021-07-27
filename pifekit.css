@@ -726,3 +726,8 @@ body.dark .tab {
     margin-right: -.8rem;
     padding: 1.6rem .8rem;
 }
+
+audio {
+    max-width: 100%;
+}
+
