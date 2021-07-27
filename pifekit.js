@@ -123,6 +123,63 @@ function bindCensorButtons() {
     });
 }
 
+
+function normalize(string) {
+    /* Trim, lowercase and replace characters with accents. */
+    return string.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
+}
+
+function normalizeTurbo(string) {
+    return normalize(string).replaceAll("-", " ").replaceAll("—", " ").replaceAll("–", " ").replace(/  */g, " ").trim();
+}
+
+function importTemplate(templateId) {
+    /* Find a template by its id and import it to the DOM. */
+    return document.importNode(document.getElementById(templateId).content, true);
+}
+
+function choose(arr) {
+    return arr[Math.floor(Math.random() * arr.length)];
+}
+
+function startCountingAnimation(element, end, formatter, duration) {
+    let timeStart = new Date();
+    let start = 0;
+    element.innerHTML = formatter(start);
+    let interval = setInterval(() => {
+        let progress = Math.min(1, ((new Date()) - timeStart) / duration);
+        progress = Math.pow(progress, 0.25);
+        let value = (1 - progress) * start + progress * end;
+        element.innerHTML = formatter(value);
+        if (progress >= 1) {
+            clearInterval(interval);
+        }
+    }, 10);
+}
+
+function getArrayExtremum(array, comparator, direction) {
+    let extremumIndex = null;
+    array.forEach((element, index) => {
+        if (extremumIndex == null || direction * comparator(element, array[extremumIndex]) > 0) {
+            extremumIndex = index;
+        }
+    });
+    if (extremumIndex == null) return null;
+    return array[extremumIndex];
+}
+
+function getArrayMin(array, comparator) {
+    return getArrayExtremum(array, comparator, -1);
+}
+
+function getArrayMax(array, comparator) {
+    return getArrayExtremum(array, comparator, 1);
+}
+
+function getUrlParameters() {
+    return new URLSearchParams(window.location.search);
+}
+
 window.addEventListener("load", () => {
     startAutoCarousels();
     setScrolls();
