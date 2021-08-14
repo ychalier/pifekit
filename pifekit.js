@@ -180,10 +180,32 @@ function getUrlParameters() {
     return new URLSearchParams(window.location.search);
 }
 
+function remToPx(rem) {
+  return rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
+}
+
+function updateOverwidthElements() {
+  document.querySelectorAll(".overwidth-container").forEach(container => {
+    let element = container.querySelector(".overwidth");
+    let offset = element.getAttribute("overwidth-offset");
+    if (offset == null) {
+      offset = 0;
+    } else {
+      offset = .01 * parseFloat(offset);
+    }
+    let left = offset * (container.offsetLeft - remToPx(.4)) + remToPx(.4);
+    element.style.marginLeft = (left - container.offsetLeft) + "px";
+    element.style.width = (window.innerWidth - 2 * left) + "px";  
+  });
+}
+
 window.addEventListener("load", () => {
     startAutoCarousels();
     setScrolls();
     bindTabs();
     bindToastClearButtons();
     bindCensorButtons();
+    updateOverwidthElements();
 });
+
+window.addEventListener("resize", updateOverwidthElements);
