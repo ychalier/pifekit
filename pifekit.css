@@ -38,6 +38,7 @@ body {
     --color-tertiary-0: hsl(210, 14%, 97%);
     --color-tertiary-1: hsla(210, 14%, 97%, 0.5);
     --color-tertiary-2: hsla(210, 14%, 97%, 0.25);
+    --color-tertiary-3: hsla(206, 14%, 97%, 0.75);
     --color-accent-0: hsl(241, 63%, 49%);
     --color-accent-1: hsl(241, 64%, 51%);
     --color-accent-2: hsl(241, 63%, 52%);
@@ -105,6 +106,7 @@ body {
     --color-tertiary-0: hsl(210, 14%, 97%);
     --color-tertiary-1: hsla(210, 14%, 97%, 0.5);
     --color-tertiary-2: hsla(210, 14%, 97%, 0.25);
+    --color-tertiary-3: hsla(206, 14%, 97%, 0.75);
     --color-accent-0: hsl(0, 63%, 49%);
     --color-accent-1: hsl(0, 64%, 51%);
     --color-accent-2: hsl(0, 63%, 52%);
@@ -172,6 +174,7 @@ body {
     --color-tertiary-0:  hsl(210, 0%, 7%);
     --color-tertiary-1: hsla(210, 14%, 3%, 0.5);
     --color-tertiary-2: hsla(210, 14%, 3%, 0.25);
+    --color-tertiary-3: hsla(206, 14%, 3%, 0.75);
     --color-accent-0: hsl(231, 63%, 49%);
     --color-accent-1: hsl(231, 64%, 51%);
     --color-accent-2: hsl(231, 63%, 52%);
@@ -239,6 +242,7 @@ body {
     --color-tertiary-0:  hsl(210, 0%, 7%);
     --color-tertiary-1: hsla(210, 14%, 3%, 0.5);
     --color-tertiary-2: hsla(210, 14%, 3%, 0.25);
+    --color-tertiary-3: hsla(206, 14%, 3%, 0.75);
     --color-accent-0: hsl(130, 63%, 49%);
     --color-accent-1: hsl(130, 64%, 51%);
     --color-accent-2: hsl(130, 63%, 52%);
@@ -306,6 +310,7 @@ body {
     --color-tertiary-0:  hsl(210, 0%, 7%);
     --color-tertiary-1: hsla(210, 14%, 3%, 0.5);
     --color-tertiary-2: hsla(210, 14%, 3%, 0.25);
+    --color-tertiary-3: hsla(206, 14%, 3%, 0.75);
     --color-accent-0: hsl(200, 63%, 49%);
     --color-accent-1: hsl(200, 64%, 51%);
     --color-accent-2: hsl(200, 63%, 52%);
@@ -373,6 +378,7 @@ body {
     --color-tertiary-0:  hsl(210, 0%, 7%);
     --color-tertiary-1: hsla(210, 14%, 3%, 0.5);
     --color-tertiary-2: hsla(210, 14%, 3%, 0.25);
+    --color-tertiary-3: hsla(206, 14%, 3%, 0.75);
     --color-accent-0: hsl(0, 63%, 49%);
     --color-accent-1: hsl(0, 64%, 51%);
     --color-accent-2: hsl(0, 63%, 52%);
@@ -440,6 +446,7 @@ body {
     --color-tertiary-0:  hsl(210, 0%, 7%);
     --color-tertiary-1: hsla(210, 14%, 3%, 0.5);
     --color-tertiary-2: hsla(210, 14%, 3%, 0.25);
+    --color-tertiary-3: hsla(206, 14%, 3%, 0.75);
     --color-accent-0: hsl(45, 63%, 49%);
     --color-accent-1: hsl(45, 64%, 51%);
     --color-accent-2: hsl(45, 63%, 52%);
@@ -3192,7 +3199,7 @@ summary.accordion-header::-webkit-details-marker {
 
 .modal:target .modal-overlay,
 .modal.active .modal-overlay {
-    background: var(--color-accent-h);
+    background: var(--color-tertiary-3);
     bottom: 0;
     cursor: default;
     display: block;
