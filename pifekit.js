@@ -3,6 +3,9 @@ var orderingDrag = {
     dragged: null,
 }
 
+const TOAST_LONG = 3500;
+const TOAST_SHORT = 2000;
+
 function getParentInArray(item, array) {
     for (let i = 0; i < array.length; i++) {
         if (array[i].contains(item)) {
@@ -241,6 +244,20 @@ function toggleFullScreen() {
     } else {
         cancelFullScreen.call(doc);
     }
+}
+
+function toast(message, duration) {
+    let snackbar = document.getElementById("snackbar");
+    snackbar.textContent = message;
+    snackbar.className = "show";
+    setTimeout(function() {
+        snackbar.classList.add("hide");
+        setTimeout(function() {
+            snackbar.classList.remove("show");
+            snackbar.classList.remove("hide");
+            snackbar.textContent = "";
+        }, 500);
+    }, duration);
 }
 
 window.addEventListener("load", () => {

@@ -33,5 +33,6 @@ remToPx(rem)
 showModal(modalId)
 shuffleArray(array)
 startCountingAnimation(element, end, formatter, duration)
+toast(message, duration)
 toggleFullScreen()
 ```
