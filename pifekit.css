@@ -4504,6 +4504,12 @@ a.text-error:visited {
     border-radius: 50%;
 }
 
+.responsive-square:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
 .text-left {
     text-align: left;
 }
