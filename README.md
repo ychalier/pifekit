@@ -12,3 +12,26 @@ This toolkit contains CSS and JS files. Those are served through the [jsDelivr](
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/ychalier/pifekit/pifekit.min.css" />
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/ychalier/pifekit/pifekit.min.js"></script>
 ```
+
+## JavaScript utility functions
+
+```javascript
+absorbEvent(event)
+addBools(...x)
+bindDraggableOrdering(container, itemSelector, dropCallback)
+capitalize(string)
+choose(arr)
+closeModal(modalId)
+getArrayMax(array, comparator)
+getArrayMin(array, comparator)
+getParentInArray(item, array)
+getUrlParameters()
+importTemplate(templateId)
+normalize(string)
+normalizeTurbo(string)
+remToPx(rem)
+showModal(modalId)
+shuffleArray(array)
+startCountingAnimation(element, end, formatter, duration)
+toggleFullScreen()
+```
